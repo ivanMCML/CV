@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Životopis
+{% endblock %}
+
+{% block header %}
+  O meni
+{% endblock %}
+
+{% block main %}
+
+  <img src="/static/img/ivan.jpeg" style="object-position: center;">
+  
+  {% if admin %}
+    <div>
+      <h1>Prijavljen si</h1>
+    </div>
+  {% endif %}
+  
+  <div>
+    <p></p>
+    <p>
+      Pozdrav i dobrodošli. Ja sam Ivan Bebić, student i programer željan novih znanja, izazova i dokazivanja.
+      Ovom aplikacijom predstavit ću sebe, svoje vještine i projekte. Ako imate kakvu kritiku (pozitivnu ili negatvinu), savjet ili ponudu za suradnju, slobodno me kontaktirajte.
+    </p>
+    <p></p>
+
+    <h3>Radno iskustvo</h3>
+    <hr>
+    <ul>
+      <li>Rad u OPG-u (proizvodnja i prodaja)</li>
+      <li>Trener karatea (volonterski)</li>
+      <li>Učitelj sviranja mandoline (volonterski)</li>
+    </ul>
+    <p></p>
+
+    <h3>Obrazovanje</h3>
+    <hr>
+    <p>
+      Osnovnu školu i opću gimnaziju završio sam u rodnom gradu, Metkoviću.
+      Od 2023. godine student sam stručnog studija <b>računarstva na FESB-u</b> u Splitu, gdje sam <b>u roku završio prve dvije godine</b> studija.
+      Osim studiranjem, svoje znanje i vještine pokušavam unaprijediti i raznim predavanjima i tečajevima među kojima bih izdvojio završeni Harvardov tečaj računarstva - <b>CS50X</b>.
+    </p>
+    <p></p>
+
+    <h3>Tehničke vještine</h3>
+    <hr>
+    <ul>
+      <li><b>Programski jezici:</b> C (najviše iskustva), C++, Java, JavaScript, Python, Visual Basic, Scratch</li>
+      <li><b>Web tehnologije:</b> Flask, Jinja, HTML, CSS</li>
+      <li><b>Baze podataka:</b> SQLite, MySQL</li>
+      <li><b>Razvojna okruženja:</b> VS Code, Visual Studio, Eclipse</li>
+      <li><b>Alati:</b> UNIX terminal, Git, GitHub</li>
+      <li><b>Ostalo:</b> Microsoft Excel, Word, PowerPoint, CapCut </li>
+    </ul>
+    <p></p>
+
+    <h3>Osobne vještine</h3>
+    <hr>
+    <p>
+      Kvalitetno surađujem u timu, pri čemu zajednički cilj uvijek stvavljam na prvo mjesto.
+      Sudjelovao sam u nekoliko timskih projekata, od kojih bih izdvojio razvoj chatbota u skupini od desetak članova.
+      Također, moj timski duh i liderske sposobnosti isticale su se i na nogometnim terenima gdje sam u mlađim uzrastima bio kapetan svog kluba.
+    </p>
+    <p>
+      Odlikuju me logičko razmišljanje i kreativan pristup pri rješavanju problema.
+      Organiziran sam i kvalitetno planiram svoje vrijeme.
+    </p>
+    <p></p>
+
+    <h3>Postignuća</h3>
+    <hr>
+    <ul>
+      <li><a href=""><b>CS50X</b> certifikat</a> za završeni Harvardov tečaj računarstva</li>
+      <li>Brojni projekti na <a href="https://github.com/ivanMCML">GitHub profilu</a></li>
+      <li>Samostalno razvijena <a href="https://scratch.mit.edu/projects/1149081308">videoigra</a> u Sratchu</li>
+      <li>Sudjelovanje u nekoliko školskih informatičkih projekata</li>
+    </ul>
+    <p></p>
+
+    <h3>Konferencije i seminari</h3>
+    <hr>
+    <p>
+      S ciljem stjecanja novih znanja, redovito sudjelujem stručnim predavanjima.
+    </p>
+    <ul>
+      <li>DUMP Days 2024. i 2025.</li>
+      <li>Aj+Ti konferencija 2024. i 2025.</li>
+    </ul>
+    <p></p>
+
+    <h3>Hobiji i interesi</h3>
+    <hr>
+    <ul>
+      <li>Sviranje</li>
+      <li>Nogomet</li>      
+      <li>Crtanje</li>
+      <li>Dodatne edukacije</li>
+      <li>Programiranje</li>
+    </ul>
+    <p></p>
+
+    <h3>Jezici</h3>
+    <hr>
+    <ul>
+      <li>Hrvatski materinji jezik</li>
+      <li>Engleski jezik (B2)</li>      
+      <li>Njemački jezik (A1)</li>
+    </ul>
+    <p></p>
+  </div>
+
+
+{% endblock %}

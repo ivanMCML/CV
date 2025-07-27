@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Verificiraj mail
+{% endblock %}
+
+{% block header %}
+  Verificraj mail
+{% endblock %}
+
+{% block main %}
+  <div>
+    <form method="post" action="/verify">
+      <label for="verify">Unesite verifikacijski kod koji ste dobili na mail:</label>
+      <input type="text" name="verify" pattern="\d{6}" placeholder="X X X X X X" required autofocus>
+      <input type="submit" value="verify">
+    </form>
+  </div>
+{% endblock %}

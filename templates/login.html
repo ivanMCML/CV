@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Prijava
+{% endblock %}
+
+{% block header %}
+  Prijavi se
+{% endblock %}
+
+{% block main %}
+
+  <div>
+    <form class="login" method="post" action="/login">
+      <label for="email">Username:</label>
+      <input class="login-input" type="text" name="email" required>
+      <label for="password">Password:</label>
+      <input class="login-input" type="password" name="password" required> 
+      <input class="button" type="submit" value="Log in">
+    </form>
+  </div>
+
+  <div>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+  </div>
+
+{% endblock %}

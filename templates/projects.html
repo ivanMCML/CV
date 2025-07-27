@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title%}
+  Projekti
+{% endblock %}
+
+{% block header %}
+  Moji Projekti
+{% endblock %}
+
+{% block main %}
+
+  <div>
+    <form method="post" action="/projects">
+      <p><label>Jezici:</label></p>
+      <label><input type="checkbox" name="language" value="all" checked> Svi</label>
+      {% for lang in languages %}
+        <label><input type="checkbox" name="language" value="{{ lang.id }}"> {{ lang.name }} </label>
+      {% endfor %}
+      <p></p>
+      <p><label>Vrste projekata:</label></p>
+      <label><input type="checkbox" name="project_type" value="all" checked> Svi</label>
+      {% for ty in types %}
+        <label><input type="checkbox" name="project_type" value="{{ ty.id }}"> {{ ty.name }} </label>
+      {% endfor %}
+
+      <p><input class="submit button" type="submit" value="Traži"></p>
+    </form>
+  </div>
+
+  <form method="post" action="/remove">
+    {% if projects %}  
+
+      {% for project in projects %}
+
+        <div class="project">
+          <h3>{{ project.name }}</h3>
+          {{ project.description }}
+          <p></p>
+          <img src="/static/img/{{ project.image }}">
+          <p></p>
+          <p><a href="{{ project.link }}">{{ project.name }}</a></p>
+          {% if admin %}
+            <input type="checkbox" name="remove" value="{{ project.id }}">
+          {% endif %}
+        </div>
+
+      {% endfor %}
+
+    {% else %}
+        <div><p>Nije moguće učitati projekte</p></div>
+    {% endif %}
+    
+    {% if admin %}
+      <div>
+        <input type="submit" value="Izbriši">
+      </div>
+    {% endif %}
+  </form>
+{% endblock %}

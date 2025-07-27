@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+Kontaktiraj me
+{% endblock %}
+
+{% block header %}
+  Kontaktiraj me
+{% endblock %}
+
+{% block main %}
+  <div>
+    <form method="post" action="/contact">
+      <textarea class="contact" name="content" placeholder="Ostavite primjedbu, kritiku, ponudu za suradnju itd." required></textarea>
+      <input class="contact" type="email" name="email" placeholder="yourEmail@domain.com" required>
+      <input class="contact button" type="submit" value="Pošalji">
+    </form>
+  </div>
+  
+  <div>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+  </div>
+
+
+{% endblock %}

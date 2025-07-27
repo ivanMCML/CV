@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Dodaj
+{% endblock %}
+
+{% block header %}
+  Dodaj 
+{% endblock %}
+
+{% block main %}
+
+  <div>
+    <form method="post" action="/add" enctype="multipart/form-data">
+      <label for="name">Ime projekta:</label>
+      <input name="name" type="text" required>
+      <label for="description">Opis:</label>
+      <textarea name="description" required></textarea> 
+      <label for="link">Poveznica:</label>
+      <input name="link" type="text" required>
+      <label for="image">Slika:</label>
+      <input name="image" type="file" accept="image/*" required>
+      <label for="language">Odaberi jezik:</label>
+      <select name="language">
+        {% for lang in languages %}
+          <option value="{{lang.id}}">{{lang.name}}</option>
+        {% endfor %}
+      </select>
+      <label for="project_type">Odaberi vrstu projekta:</label>
+      <select name="project_type">
+        {% for ty in types %}
+          <option value="{{ty.id}}">{{ty.name}}</option>
+        {% endfor %}
+      </select>
+      <input type="submit">
+    </form>
+  </div>
+
+  <div>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+  </div>
+
+{% endblock %}
