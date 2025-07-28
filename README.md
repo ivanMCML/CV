@@ -1,5 +1,5 @@
-# Ivan Bebić - CV
-#### Video Demo:
+# Resume & Portfolio app
+#### Video Demo: https://youtu.be/Fob1Wkxxj1w
 #### Description:
 
 My idea for this project was to create an application that serves as my personal resume. 
